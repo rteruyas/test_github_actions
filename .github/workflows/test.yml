@@ -1,0 +1,14 @@
+name: Test Branch Workflow
+# Whenever a push event occurs on the test_github_actions branch, the workflow will be triggered.
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-workflow:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Print test message
+        run: echo "this is working"
